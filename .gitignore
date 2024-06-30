@@ -1,0 +1,37 @@
+.DS_Store
+.idea
+
+# Nix stuff
+.env
+.envrc
+flake.nix
+flake.lock
+
+# Haskell stuff 
+dist
+dist-newstyle
+*.dyn_hi
+*.dyn_o
+*.hi
+*.o
+build
+hie.yaml
+
+tmp
+result
+node_modules
+bin
+*.iml
+Generated
+gen
+del
+static/prod.*
+Config/client_session_key.aes
+
+# Ignore locally checked out IHP version
+IHP
+
+# devenv.sh
+.devenv*
+devenv.local.nix
+.direnv
