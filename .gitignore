@@ -4,7 +4,6 @@
 # Nix stuff
 .env
 .envrc
-flake.nix
 flake.lock
 
 # Haskell stuff 
