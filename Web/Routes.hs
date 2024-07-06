@@ -10,3 +10,18 @@ instance AutoRoute PostsController
 
 instance AutoRoute CommentsController
 
+
+instance AutoRoute CompaniesController
+
+
+instance AutoRoute GoodsController
+
+
+instance AutoRoute LocationsController
+
+
+instance AutoRoute StocksController
+
+
+instance AutoRoute RoutesController
+

@@ -28,3 +28,53 @@ data CommentsController
     | UpdateCommentAction { commentId :: !(Id Comment) }
     | DeleteCommentAction { commentId :: !(Id Comment) }
     deriving (Eq, Show, Data)
+
+data CompaniesController
+    = CompaniesAction
+    | NewCompanyAction
+    | ShowCompanyAction { companyId :: !(Id Company) }
+    | CreateCompanyAction
+    | EditCompanyAction { companyId :: !(Id Company) }
+    | UpdateCompanyAction { companyId :: !(Id Company) }
+    | DeleteCompanyAction { companyId :: !(Id Company) }
+    deriving (Eq, Show, Data)
+
+data GoodsController
+    = GoodsAction
+    | NewGoodAction
+    | ShowGoodAction { goodId :: !(Id Good) }
+    | CreateGoodAction
+    | EditGoodAction { goodId :: !(Id Good) }
+    | UpdateGoodAction { goodId :: !(Id Good) }
+    | DeleteGoodAction { goodId :: !(Id Good) }
+    deriving (Eq, Show, Data)
+
+data LocationsController
+    = LocationsAction
+    | NewLocationAction
+    | ShowLocationAction { locationId :: !(Id Location) }
+    | CreateLocationAction
+    | EditLocationAction { locationId :: !(Id Location) }
+    | UpdateLocationAction { locationId :: !(Id Location) }
+    | DeleteLocationAction { locationId :: !(Id Location) }
+    deriving (Eq, Show, Data)
+
+data StocksController
+    = StocksAction
+    | NewStockAction
+    | ShowStockAction { stockId :: !(Id Stock) }
+    | CreateStockAction
+    | EditStockAction { stockId :: !(Id Stock) }
+    | UpdateStockAction { stockId :: !(Id Stock) }
+    | DeleteStockAction { stockId :: !(Id Stock) }
+    deriving (Eq, Show, Data)
+
+data RoutesController
+    = RoutesAction
+    | NewRouteAction
+    | ShowRouteAction { routeId :: !(Id Route) }
+    | CreateRouteAction
+    | EditRouteAction { routeId :: !(Id Route) }
+    | UpdateRouteAction { routeId :: !(Id Route) }
+    | DeleteRouteAction { routeId :: !(Id Route) }
+    deriving (Eq, Show, Data)
