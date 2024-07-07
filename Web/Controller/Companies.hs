@@ -52,4 +52,4 @@ instance Controller CompaniesController where
         redirectTo CompaniesAction
 
 buildCompany company = company
-    |> fill @'["name", "address"]
+    |> fill @'["name"]

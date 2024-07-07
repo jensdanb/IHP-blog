@@ -5,6 +5,7 @@ import Web.Controller.Prelude
 import Web.View.Layout (defaultLayout)
 
 -- Controller Imports
+import Web.Controller.Games
 import Web.Controller.Routes
 import Web.Controller.Stocks
 import Web.Controller.Locations
@@ -18,11 +19,12 @@ instance FrontController WebApplication where
     controllers = 
         [ startPage WelcomeAction
         -- Generator Marker
-        , parseRoute @RoutesController
+        , parseRoute @GamesController
+        {-, parseRoute @RoutesController
         , parseRoute @StocksController
         , parseRoute @LocationsController
         , parseRoute @GoodsController
-        , parseRoute @CompaniesController
+        , parseRoute @CompaniesController -}
         , parseRoute @CommentsController
         , parseRoute @PostsController
         ]

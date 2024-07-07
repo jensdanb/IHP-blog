@@ -18,7 +18,6 @@ instance View EditView where
 renderForm :: Company -> Html
 renderForm company = formFor company [hsx|
     {(textField #name)}
-    {(textField #address)}
     {submitButton}
 
 |]

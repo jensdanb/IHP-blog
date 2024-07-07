@@ -78,3 +78,13 @@ data RoutesController
     | UpdateRouteAction { routeId :: !(Id Route) }
     | DeleteRouteAction { routeId :: !(Id Route) }
     deriving (Eq, Show, Data)
+
+data GamesController
+    = GamesAction
+    | NewGameAction
+    | ShowGameAction { gameId :: !(Id Game) }
+    | CreateGameAction
+    | EditGameAction { gameId :: !(Id Game) }
+    | UpdateGameAction { gameId :: !(Id Game) }
+    | DeleteGameAction { gameId :: !(Id Game) }
+    deriving (Eq, Show, Data)

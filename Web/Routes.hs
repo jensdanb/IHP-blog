@@ -25,3 +25,6 @@ instance AutoRoute StocksController
 
 instance AutoRoute RoutesController
 
+
+instance AutoRoute GamesController
+
