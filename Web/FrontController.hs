@@ -17,7 +17,7 @@ import Web.Controller.Static
 
 instance FrontController WebApplication where
     controllers = 
-        [ startPage WelcomeAction
+        [ startPage HomeAction
         -- Generator Marker
         , parseRoute @GamesController
         {-, parseRoute @RoutesController
