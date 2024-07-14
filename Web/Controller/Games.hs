@@ -5,6 +5,7 @@ import Web.View.Games.Index
 import Web.View.Games.New
 import Web.View.Games.Edit
 import Web.View.Games.Show
+import Web.View.Games.Play
 
 instance Controller GamesController where
     action GamesAction = do
@@ -18,6 +19,10 @@ instance Controller GamesController where
     action ShowGameAction { gameId } = do
         game <- fetch gameId
         render ShowView { .. }
+    
+    action PlayGameAction { gameId } = do
+        game <- fetch gameId
+        render PlayView { .. }
 
     action EditGameAction { gameId } = do
         game <- fetch gameId

@@ -7,7 +7,10 @@ import Generated.Types
 data WebApplication = WebApplication deriving (Eq, Show)
 
 
-data StaticController = WelcomeAction deriving (Eq, Show, Data)
+data StaticController 
+    = WelcomeAction 
+    | HomeAction
+    deriving (Eq, Show, Data)
 
 data PostsController
     = PostsAction
@@ -83,6 +86,7 @@ data GamesController
     = GamesAction
     | NewGameAction
     | ShowGameAction { gameId :: !(Id Game) }
+    | PlayGameAction { gameId :: !(Id Game) }
     | CreateGameAction
     | EditGameAction { gameId :: !(Id Game) }
     | UpdateGameAction { gameId :: !(Id Game) }

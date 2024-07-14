@@ -1,11 +1,11 @@
-module Web.View.Games.Show where
+module Web.View.Games.Play where
 import Web.View.Prelude
 import IHP.HSX.ToHtml (toHtml)
 
-data ShowView = ShowView { game :: Game }
+data PlayView = PlayView { game :: Game }
 
-instance View ShowView where
-    html ShowView { .. } = [hsx|
+instance View PlayView where
+    html PlayView { .. } = [hsx|
         {breadcrumb}
         <h1>Show Game</h1>
         <p>{game}</p>
@@ -13,6 +13,6 @@ instance View ShowView where
     |]
         where
             breadcrumb = renderBreadcrumb
-                            [ breadcrumbLink "Games" GamesAction
+                            [ breadcrumbLink "Games" HomeAction
                             , breadcrumbText $ toHtml game.title
                             ]

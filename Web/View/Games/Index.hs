@@ -6,27 +6,31 @@ data IndexView = IndexView { games :: [Game] }
 instance View IndexView where
     html IndexView { .. } = [hsx|
         {breadcrumb}
-
-        <h1>Index<a href={pathTo NewGameAction} class="btn btn-primary ms-4">+ New</a></h1>
-        <div class="table-responsive">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>Game</th>
-                        <th>Score</th>
-                        <th></th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>{forEach games renderGame}</tbody>
-            </table>
-            
-        </div>
+        {gamesTable games}
     |]
         where
             breadcrumb = renderBreadcrumb
                 [ breadcrumbLink "Games" GamesAction
                 ]
+
+gamesTable :: [Game] -> Html
+gamesTable games = [hsx| 
+    <h1>Games<a href={pathTo NewGameAction} class="btn btn-primary ms-4">+ New</a></h1>
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Game</th>
+                    <th>Score</th>
+                    <th></th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>{forEach games renderGame}</tbody>
+        </table>
+        
+    </div>
+|]
 
 renderGame :: Game -> Html
 renderGame game = [hsx|
